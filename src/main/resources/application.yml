@@ -1,0 +1,62 @@
+﻿server:
+  port: 8042
+  
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 20
+      data-source-properties:
+        setIdleTimeout: 60000 
+        setConnectionTimeout: 60000 
+        setValidationTimeout: 3000 
+        setLoginTimeout: 5 
+        setMaxLifetime: 60000  
+  profiles:
+   #active: demo
+   active: dev
+   #active: test
+   #active: testnw
+  cloud:
+      refresh:
+        refreshable: none
+  application:
+    name: appapi-service
+  data:
+    redis:
+      repositories:
+        enabled: false 
+  jpa:
+    generate-ddl: false 
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect  #需要指定数据库的版本，默认版本oracle12c
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false 
+swagger:
+  token: whxxykj
+hystrix: 
+  command: 
+    default: 
+      execution: 
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+feign:
+  hystrix:
+    enabled : true
+ribbon:
+  eureka:
+    enabled: false ##关闭eureka的负载均衡
+  
+runTimeConfig: 
+  appName: appapi
+  systemId: "005"
+  runType: app
+  siteType: 2    #1前台,2后台

@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:mysql://rm-uf6a-vpc-vpc-saas-test.mysql.rds.aliyuncs.com:3306/saas-test?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: saas_astest
+    password: As@test#test738ykf
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+      host: 139.196.40.214
+      port: 32315
+      database: 0
+      password: MJ.qwe689
+activiti:
+    database-schema: saas-test
+    
+feign:
+  file-service: https://maya-plugin-oss-test.ystyun.com 
+trademConfig: 
+  printUrl: https://print-test.ystyun.com 
+  wxUrl: https://h5-test.ystyun.com 
+  jpushUrl: https://h5-test.ystyun.com/view/message/navigationMenu?source=app 
+  saleScontractTemplateId: MvEypjuV9SzjKtHJBR43pitTEstU_tjzGXf0tirQtlo
+  

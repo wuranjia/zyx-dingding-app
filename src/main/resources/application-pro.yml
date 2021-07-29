@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mysql://rm-uf6d60p-saas-pro.mysql.rds.aliyuncs.com:3306/saas-pro?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: saas_admin
+    password: As@Sass#7o8y0f
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+      host: r-uf6xfg2eczr82x4fz2.redis.rds.aliyuncs.com
+      database: 5
+      password: Sass#pr076oK!1
+activiti:
+    database-schema: saas-pro
+    
+feign:
+  file-service: https://maya-plugin-oss.ystyun.com ##指定调用服务的地址 
+trademConfig: 
+  printUrl: https://print.ystyun.com
+  wxUrl: https://h5.ystyun.com 
+  jpushUrl: https://h5.ystyun.com/view/message/navigationMenu?source=app
+  saleScontractTemplateId: iZeRoqVcpsiLSeL_mGZ6Np_rw_km2lYKqJFdIAMo1JU

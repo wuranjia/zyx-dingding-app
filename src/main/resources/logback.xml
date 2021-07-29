@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- scan 配置文件如果发生改变，将会被重新加载  scanPeriod 检测间隔时间-->
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+
+    <property name="appName" value="appapi" />
+    <include resource="net/whxxykj/maya/common/log/mayalog.xml"/>
+</configuration>
+
